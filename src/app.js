@@ -46,14 +46,15 @@ app.get('/weather',(req,res) => {
             return res.send({error})
         }
         const sijainti = location
-        forecast(latitude,longitude, (error, {temperature,description}) => {
+        forecast(latitude,longitude, (error, {temperature,description,windspeed}) => {
             if(error){
                 console.log(error)
             }
             res.send({
                 temperature: temperature,
                 description: description, 
-                location: sijainti
+                location: sijainti,
+                windspeed: windspeed
             })
         })
     })

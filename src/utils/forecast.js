@@ -13,7 +13,8 @@ const forecast = (longitude,latitude,callback) => {
                 description: body.currently.summary,
                 temperature: body.currently.temperature,
                 rainchance: body.currently.precipProbability,
-                timezone: body.timezone
+                timezone: body.timezone,
+                windspeed: body.currently.windSpeed
 
             })
         }
