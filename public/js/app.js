@@ -25,7 +25,8 @@ weatherForm.addEventListener('submit',(e) => {
             messageTwo.textContent = data.error
         }else{
             messageTwo.textContent = 'Sää '+data.location+":ssa on tällä hetkellä."+
-            data.description+" ja lämpötila on "+data.temperature+"C astetta."
+            data.description+" ja lämpötila on "+data.temperature+"C astetta. Tuulen"+
+            " nopeus on "+data.windspeed+"m/s."
             console.log(data.location)
             console.log(data.temperature)
             console.log(data.description)
